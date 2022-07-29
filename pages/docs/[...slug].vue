@@ -1,13 +1,8 @@
 <template>
   <main id="root" class="font-docs">
-    <nav
-      id="top"
-      class="px-60 text-2xl font-sans font-bold py-4 cursor-pointer"
-    >
-      TCore.js Docs
-    </nav>
+    <Nav />
     <div id="indexnav" class="pl-60 flex flex-col py-5">
-      <ContentList path="/" v-slot="{ list }">
+      <ContentList path="/first-steps" v-slot="{ list }">
         <h1 class="text-2xl">Contents</h1>
         <span
           v-for="page in list"

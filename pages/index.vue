@@ -3,7 +3,9 @@
     <nav class="text-white py-5 grid grid-cols-2 text-4xl max-h-20">
       <span class="font-bold">
         <span class="mx-3 cursor-pointer">Tcore.js</span>
-        <!-- <span class="mx-3 cursor-text text-neptune font-normal text-2xl">Search</span> -->
+        <span class="mx-3 cursor-text text-neptune font-normal text-xl border-slate-700 border-solid border-x-2 border-y-2 rounded-md py-1 px-3 font-mono h-full"
+          >🔍 ctrl k</span
+        >
       </span>
       <span class="justify-self-end text-2xl font-medium">
         <span class="mx-3 cursor-pointer hover:text-blue-400">Deploy</span>
@@ -15,27 +17,30 @@
     </nav>
 
     <div class="grid content-center h-fit justify-self-center pt-56">
-      <span class="text-center text-2xl ">
+      <span class="text-center text-2xl">
         ✌️
-        <span class="bg-gradient-to-r text-green-300 font-medium">Coming
-          SOON</span>
+        <span class="bg-gradient-to-r text-green-300 font-medium"
+          >Coming SOON</span
+        >
         ✌️
       </span>
-      <span class="mx-3 font-black text-7xl bg-gradient-to-r from-grad1 to-grad2 bg-clip-text text-transparent pb-3 text-center">
+      <span
+        class="mx-3 font-black text-7xl bg-gradient-to-r from-grad1 to-grad2 bg-clip-text text-transparent pb-3 text-center"
+      >
         Native APIs brought to the WEB
       </span>
       <span class="mx-3 text-neptune text-center text-2xl pt-5">
-        A messenger for TCore - let's JS communicate with the device and other apps
+        A messenger for TCore - let's JS communicate with the device and other
+        apps
       </span>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-</script>
+<script lang="ts"></script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 #root {
   grid-template-rows: 7rem 1fr;
