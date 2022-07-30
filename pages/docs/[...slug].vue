@@ -2,16 +2,30 @@
   <main id="root" class="font-docs">
     <Nav />
     <div id="indexnav" class="pl-60 flex flex-col py-5">
-      <ContentList path="/first-steps" v-slot="{ list }">
+      <ContentList
+        :path="
+          '/' +
+          ($route.params.slug.length > 0
+            ? $route.params.slug[0]
+            : 'first-steps')
+        "
+        v-slot="{ list }"
+      >
         <h1 class="text-2xl">Contents</h1>
         <span
-          v-for="page in list"
+          v-for="navpage in list"
           class="cursor-pointer font-medium text-lg text-slate-300 hover:text-slate-50 w-max rounded-md p-2 select-none"
-          :class="currPage(page._path) ? 'bg-highlight' : ''"
-          @click="$router.push(`/docs${page._path}`)"
-          :key="page._path"
+          :class="
+            currPage(navpage) && !/index.md$/.test(navpage._file)
+              ? 'bg-highlight'
+              : ''
+          "
+          @click="$router.push(`/docs${navpage._path}`)"
+          :key="navpage._path"
         >
-          {{ page.title }}
+          <span v-if="!/index.md$/.test(navpage._file)">
+            {{ navpage.title }}
+          </span>
         </span>
       </ContentList>
     </div>
@@ -34,11 +48,25 @@ const indexHighlight = ref(`/${page}`);
 
 const data = await queryContent(`/${page}`).findOne();
 
-const currPage = (e: string) => {
-  return (
-    e === indexHighlight.value ||
-    (e === "/first-steps/getting-started" && indexHighlight.value === "/")
-  );
+const currPage = (e: any): boolean => {
+  const sethead = () => {
+    useHead({
+      // titleTemplate: (titleChunk) => {
+      //   const title = e.title;
+      //   return titleChunk ? `${titleChunk} - ${title}` : title;
+      // },
+      title: `TCore.js - ${e.title}`,
+    });
+  };
+
+  const currpage = e._path;
+  if (route.params.slug.length === 1) {
+    /\/1(?!.*\/1)/.test(e._file) && sethead();
+    return /\/1(?!.*\/1)/.test(e._file);
+  } else {
+    currpage === indexHighlight.value && sethead();
+    return currpage === indexHighlight.value;
+  }
 };
 
 const modify = (element: keyof HTMLElementTagNameMap, pre = "", post = "") => {
@@ -48,10 +76,6 @@ const modify = (element: keyof HTMLElementTagNameMap, pre = "", post = "") => {
     curr.innerHTML = `${pre}${curr.innerHTML}${post}`;
   }
 };
-
-onMounted(() => {
-  // refresh();
-});
 </script>
 
 <style lang="scss">

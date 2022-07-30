@@ -6,12 +6,15 @@
     <IconNav />
     <!-- This has to be auth, but for now TODO -->
     <span class="mx-auto">
-      <span class="link">Getting Started</span>
-      <span class="link">API</span>
-      <span class="link">Examples</span>
-      <span class="link">Issues</span>
-      <span class="link">sAPI</span>
-      <span class="link">Asgard API</span>
+      <ContentNavigation v-slot="{ navigation }">
+        <NuxtLink
+          class="link"
+          v-for="link of navigation"
+          :key="link._path"
+          :to="'/docs' + link._path"
+          >{{ link.title }}</NuxtLink
+        >
+      </ContentNavigation>
     </span>
     <span class="icons">
       <span>gh</span>

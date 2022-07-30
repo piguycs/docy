@@ -10,11 +10,12 @@ module.exports = {
         grad1: "#2cd8d5",
         grad2: "#8e37d7",
         palenight: "#292d3e",
+        darkborder: "#233067",
       },
       fontFamily: {
         sans: ["Inter"],
         mono: ["firacode"],
-        docs: ['DM Sans']
+        docs: ["DM Sans"],
       },
     },
   },

@@ -1,11 +1,9 @@
 <template>
   <div id="root" class="font-sans h-screen px-64 bg-midnight grid">
     <nav class="text-white py-5 grid grid-cols-2 text-4xl max-h-20">
-      <span class="font-bold">
+      <span class="font-bold flex flex-row items-center gap-2">
         <span class="mx-3 cursor-pointer">Tcore.js</span>
-        <span class="mx-3 cursor-text text-neptune font-normal text-xl border-slate-700 border-solid border-x-2 border-y-2 rounded-md py-1 px-3 font-mono h-full"
-          >🔍 ctrl k</span
-        >
+        <Search />
       </span>
       <span class="justify-self-end text-2xl font-medium">
         <span class="mx-3 cursor-pointer hover:text-blue-400">Deploy</span>
