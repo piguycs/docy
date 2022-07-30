@@ -60,7 +60,7 @@ const currPage = (e: any): boolean => {
   };
 
   const currpage = e._path;
-  if (route.params.slug.length === 1) {
+  if (route.params.slug.length <= 1) {
     /\/1(?!.*\/1)/.test(e._file) && sethead();
     return /\/1(?!.*\/1)/.test(e._file);
   } else {
@@ -154,5 +154,9 @@ li {
 
 a {
   @apply text-blue-400 hover:underline;
+}
+
+code#inlinecode {
+  @apply bg-slate-800 px-2 py-px rounded-md;
 }
 </style>

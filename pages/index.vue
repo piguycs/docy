@@ -35,7 +35,11 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+useHead({
+  title: "TCore.js - Bring Native APIs to the WEB"
+})
+</script>
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");

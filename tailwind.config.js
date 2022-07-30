@@ -9,7 +9,9 @@ module.exports = {
         neptune: "#76A0B4",
         grad1: "#2cd8d5",
         grad2: "#8e37d7",
-        palenight: "#292d3e",
+        palenight: "hsl(229, 49%, 14%)",
+        palenight2: "hsl(229, 49%, 21%)",
+        // palenight2: "#292d3e",
         darkborder: "#233067",
       },
       fontFamily: {

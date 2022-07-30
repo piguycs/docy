@@ -4,8 +4,7 @@
     class="px-60 text-2xl font-sans font-bold py-4 cursor-pointer flex flex-row items-center"
   >
     <IconNav />
-    <!-- This has to be auth, but for now TODO -->
-    <span class="mx-auto">
+    <span class="mx-auto overflow-y-scroll">
       <ContentNavigation v-slot="{ navigation }">
         <NuxtLink
           class="link"
