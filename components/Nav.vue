@@ -17,9 +17,8 @@
     </span>
     <span class="icons">
       <span>gh</span>
-      <span>gh</span>
-      <span>gh</span>
-      <span>gh</span>
+      <span>ld</span>
+      <span>search</span>
     </span>
   </nav>
 </template>

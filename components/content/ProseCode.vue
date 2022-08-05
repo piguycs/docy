@@ -10,17 +10,19 @@
         <Markdown />
       </div>
     </div>
-    <div class="p-3 cursor-pointer select-none invisible" @click="copy">copy</div>
+    <div class="p-3 cursor-pointer select-none invisible" @click="copy">
+      copy
+    </div>
   </main>
 </template>
 
 <script lang="ts" setup>
 defineProps(["filename"]);
 
-const copy = async (e:Event) => {
-  const el:any = e.target
-  const str = el.parentElement.querySelector("code").innerText
-  
+const copy = async (e: MouseEvent) => {
+  const el: any = e.target;
+  const str = el.parentElement.querySelector("code").innerText;
+
   if (navigator && navigator.clipboard && navigator.clipboard.writeText) {
     // clipboard api
     await navigator.clipboard.writeText(str);
@@ -36,13 +38,12 @@ const copy = async (e:Event) => {
     document.execCommand("copy");
     document.body.removeChild(textarea);
   }
-  
-  el.innerHTML = "copied"
-  
-  setTimeout(() => {
-    el.innerHTML = "copy"
-  }, 800)
 
+  el.innerHTML = "copied";
+
+  setTimeout(() => {
+    el.innerHTML = "copy";
+  }, 800);
 };
 </script>
 
