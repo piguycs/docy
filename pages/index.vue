@@ -2,11 +2,11 @@
   <div id="root" class="font-sans h-screen px-64 bg-midnight grid">
     <nav class="text-white py-5 grid grid-cols-2 text-4xl max-h-20">
       <span class="font-bold flex flex-row items-center gap-2">
-        <span class="mx-3 cursor-pointer">Tcore.js</span>
+        <span class="mx-3 cursor-pointer">Docy</span>
         <Search />
       </span>
       <span class="justify-self-end text-2xl font-medium">
-        <span class="mx-3 cursor-pointer hover:text-blue-400">Deploy</span>
+        <span class="mx-3 cursor-pointer hover:text-blue-400">page1</span>
         <NuxtLink to="/docs">
           <span class="mx-3 cursor-pointer hover:text-blue-400">Docs</span>
         </NuxtLink>
@@ -25,11 +25,10 @@
       <span
         class="mx-3 font-black text-7xl bg-gradient-to-r from-grad1 to-grad2 bg-clip-text text-transparent pb-3 text-center"
       >
-        Native APIs brought to the WEB
+        Documented by the cutest mascot
       </span>
       <span class="mx-3 text-neptune text-center text-2xl pt-5">
-        A messenger for TCore - let's JS communicate with the device and other
-        apps
+        A simple and fast documentation tool powered by MD
       </span>
     </div>
   </div>
@@ -37,8 +36,8 @@
 
 <script lang="ts" setup>
 useHead({
-  title: "TCore.js - Bring Native APIs to the WEB"
-})
+  title: "Docy - Documentation made simple",
+});
 </script>
 
 <style lang="scss">

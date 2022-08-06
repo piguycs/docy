@@ -55,7 +55,7 @@ const currPage = (e: any): boolean => {
       //   const title = e.title;
       //   return titleChunk ? `${titleChunk} - ${title}` : title;
       // },
-      title: `TCore.js - ${e.title}`,
+      title: `Docy - ${e.title}`,
     });
   };
 
